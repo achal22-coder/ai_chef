@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recipe Recommendation</title>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+        <div class="container">
+          <h1>AI-Powered Recipe Recommendation</h1>
+          <form id="ingredient-form">
+            <div class="input-group">
+              <label for="ingredients">Enter Ingredients:</label>
+              <input type="text" id="ingredients" placeholder="e.g., pasta, tomatoes, garlic" />
+            </div>
+            <div class="filters">
+              <label for="diet">Dietary Preference:</label>
+              <select id="diet">
+                <option value="">None</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten-free">Gluten-Free</option>
+              </select>
+              <label for="cuisine">Cuisine:</label>
+              <select id="cuisine">
+                <option value="">Any</option>
+                <option value="italian">Italian</option>
+                <option value="asian">Asian</option>
+                <option value="mexican">Mexican</option>
+              </select>
+              <label for="time">Max Cooking Time (mins):</label>
+              <input type="number" id="time" min="0" />
+            </div>
+            <button type="submit">Find Recipes</button>
+          </form>
+          <div id="results"></div>
+          <div id="loading" class="loading-spinner" style="display: none;"></div>
+        </div>
+        <script type="module" src="main.js"></script>
+      </body>
+    </html>
